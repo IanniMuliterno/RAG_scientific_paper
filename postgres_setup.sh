@@ -29,8 +29,7 @@ psql -d ian_projects
 >> CREATE TABLE biofield_rag_memory (
     id SERIAL PRIMARY KEY,
     session_id UUID NOT NULL,
-    message TEXT NOT NULL,
-    role VARCHAR(10) NOT NULL,  
+    message TEXT NOT NULL, 
     created_at TIMESTAMPTZ DEFAULT NOW()
 );
 
