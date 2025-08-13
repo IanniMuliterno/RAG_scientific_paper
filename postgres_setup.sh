@@ -2,7 +2,7 @@
 brew install postgres
 
 # start postgras 
-brew services start postgresql@17
+brew services start postgresql
 
 # create a db 
 createdb ian_muliterno 
