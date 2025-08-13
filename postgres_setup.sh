@@ -35,3 +35,9 @@ psql -d ian_projects
 
 # lets take a look at our table
 >> \d biofield_rag_memory
+
+# had trouble with memory because my code was not deserializing the message ( which is in json format) and with that, I was not able to send a second
+# message to the LLM. The solution was to change the type of the `message` column to jsonb
+>>ALTER TABLE biofield_rag_memory
+ALTER COLUMN message TYPE jsonb
+USING message::jsonb;
